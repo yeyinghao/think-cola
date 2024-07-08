@@ -2,24 +2,22 @@ package com.amos.think.test;
 
 import com.alibaba.cola.dto.MultiResponse;
 import com.alibaba.fastjson2.JSON;
-import com.amos.think.api.IUserService;
+import com.amos.think.user.api.IUserService;
 import com.amos.think.common.exception.ThinkBizException;
-import com.amos.think.dto.UserModifyCmd;
-import com.amos.think.dto.UserRegisterCmd;
-import com.amos.think.dto.data.ErrorCode;
-import com.amos.think.dto.data.UserVO;
-import com.amos.think.dto.query.UserListByParamQuery;
-import com.amos.think.dto.query.UserLoginQuery;
+import com.amos.think.user.dto.UserModifyCmd;
+import com.amos.think.user.dto.UserRegisterCmd;
+import com.amos.think.user.dto.data.ErrorCode;
+import com.amos.think.user.dto.data.UserVO;
+import com.amos.think.user.dto.query.UserListByParamQuery;
+import com.amos.think.user.dto.query.UserLoginQuery;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.FixMethodOrder;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.MethodSorters;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.time.LocalDate;
 import java.util.Objects;
@@ -32,9 +30,8 @@ import java.util.UUID;
  * @date 2021/1/9
  */
 @Slf4j
-@RunWith(SpringRunner.class)
+@ExtendWith(SpringExtension.class)
 @SpringBootTest
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class UserServiceTest {
 
     @Autowired
@@ -44,7 +41,7 @@ public class UserServiceTest {
     private static final String password = "666666";
     private static Long id = null;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         log.info("test username is [" + username + "]");
     }
@@ -63,7 +60,7 @@ public class UserServiceTest {
         UserVO register = userService.register(registerCmd);
 
         //3.assert
-        Assert.assertTrue(Objects.nonNull(register.getId()));
+        Assertions.assertTrue(Objects.nonNull(register.getId()));
 
         id = register.getId();
     }
@@ -77,7 +74,7 @@ public class UserServiceTest {
         try {
             userService.register(registerCmd);
         } catch (ThinkBizException e) {
-            Assert.assertEquals(ErrorCode.B_USER_USERNAME_REPEAT.getErrCode(), e.getErrCode());
+            Assertions.assertEquals(ErrorCode.B_USER_USERNAME_REPEAT.getErrCode(), e.getErrCode());
         }
     }
 
@@ -106,7 +103,7 @@ public class UserServiceTest {
         UserVO userVO = userService.modify(userModify);
 
         //3.assert error
-        Assert.assertTrue(Objects.nonNull(userVO));
+        Assertions.assertTrue(Objects.nonNull(userVO));
     }
 
     @Test
@@ -120,7 +117,7 @@ public class UserServiceTest {
         System.out.println(JSON.toJSONString(response));
 
         //3.assert error
-        Assert.assertTrue(response.isSuccess());
+        Assertions.assertTrue(response.isSuccess());
     }
 
 }

@@ -1,12 +1,12 @@
-package com.amos.think.api;
+package com.amos.think.user.api;
 
 import com.alibaba.cola.dto.MultiResponse;
 import com.alibaba.cola.dto.SingleResponse;
-import com.amos.think.dto.UserModifyCmd;
-import com.amos.think.dto.UserRegisterCmd;
-import com.amos.think.dto.data.UserVO;
-import com.amos.think.dto.query.UserListByParamQuery;
-import com.amos.think.dto.query.UserLoginQuery;
+import com.amos.think.user.dto.UserModifyCmd;
+import com.amos.think.user.dto.UserRegisterCmd;
+import com.amos.think.user.dto.data.UserVO;
+import com.amos.think.user.dto.query.UserListByParamQuery;
+import com.amos.think.user.dto.query.UserLoginQuery;
 
 /**
  * 用户相关

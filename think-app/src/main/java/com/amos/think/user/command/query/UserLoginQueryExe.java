@@ -1,10 +1,10 @@
 package com.amos.think.user.command.query;
 
 import com.amos.think.common.exception.ThinkBizException;
-import com.amos.think.domain.gateway.UserGateway;
+import com.amos.think.domain.user.gateway.UserGateway;
 import com.amos.think.domain.user.UserEntity;
-import com.amos.think.dto.data.ErrorCode;
-import com.amos.think.dto.query.UserLoginQuery;
+import com.amos.think.user.dto.data.ErrorCode;
+import com.amos.think.user.dto.query.UserLoginQuery;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

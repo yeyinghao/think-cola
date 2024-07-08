@@ -3,9 +3,9 @@ package com.amos.think.user.assembler;
 import com.amos.think.domain.user.UserEntity;
 import com.amos.think.domain.user.UserName;
 import com.amos.think.domain.user.UserPassword;
-import com.amos.think.dto.UserModifyCmd;
-import com.amos.think.dto.UserRegisterCmd;
-import com.amos.think.dto.data.UserVO;
+import com.amos.think.user.dto.UserModifyCmd;
+import com.amos.think.user.dto.UserRegisterCmd;
+import com.amos.think.user.dto.data.UserVO;
 
 /**
  * User Application层 转换器

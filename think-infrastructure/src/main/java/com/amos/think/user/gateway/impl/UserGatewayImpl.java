@@ -1,16 +1,16 @@
-package com.amos.think.gateway.impl;
+package com.amos.think.user.gateway.impl;
 
 import com.amos.think.common.exception.ThinkBizException;
-import com.amos.think.convertor.UserConvertor;
-import com.amos.think.domain.gateway.UserGateway;
+import com.amos.think.user.convertor.UserConvertor;
+import com.amos.think.domain.user.gateway.UserGateway;
 import com.amos.think.domain.user.UserEntity;
 import com.amos.think.domain.user.UserPassword;
-import com.amos.think.dto.data.ErrorCode;
-import com.amos.think.dto.query.UserListByParamQuery;
-import com.amos.think.gateway.impl.database.dataobject.UserDO;
-import com.amos.think.gateway.impl.database.dataobject.UserInfoDO;
-import com.amos.think.gateway.impl.database.mapper.UserInfoMapper;
-import com.amos.think.gateway.impl.database.mapper.UserMapper;
+import com.amos.think.user.gateway.impl.database.dataobject.UserDO;
+import com.amos.think.user.gateway.impl.database.dataobject.UserInfoDO;
+import com.amos.think.user.gateway.impl.database.mapper.UserInfoMapper;
+import com.amos.think.user.gateway.impl.database.mapper.UserMapper;
+import com.amos.think.user.dto.data.ErrorCode;
+import com.amos.think.user.dto.query.UserListByParamQuery;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.ibatis.exceptions.PersistenceException;
 import org.springframework.beans.factory.annotation.Autowired;

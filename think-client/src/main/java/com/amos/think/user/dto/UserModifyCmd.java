@@ -1,4 +1,4 @@
-package com.amos.think.dto;
+package com.amos.think.user.dto;
 
 import com.alibaba.cola.dto.Command;
 import lombok.Data;

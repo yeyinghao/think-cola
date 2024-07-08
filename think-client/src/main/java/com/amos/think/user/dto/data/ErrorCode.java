@@ -1,4 +1,4 @@
-package com.amos.think.dto.data;
+package com.amos.think.user.dto.data;
 
 /**
  * 错误信息

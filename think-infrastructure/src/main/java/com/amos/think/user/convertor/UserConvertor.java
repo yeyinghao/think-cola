@@ -1,9 +1,9 @@
-package com.amos.think.convertor;
+package com.amos.think.user.convertor;
 
 import com.amos.think.domain.user.UserEntity;
 import com.amos.think.domain.user.UserName;
-import com.amos.think.gateway.impl.database.dataobject.UserDO;
-import com.amos.think.gateway.impl.database.dataobject.UserInfoDO;
+import com.amos.think.user.gateway.impl.database.dataobject.UserDO;
+import com.amos.think.user.gateway.impl.database.dataobject.UserInfoDO;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 
 import java.time.LocalDateTime;

@@ -1,7 +1,7 @@
 package com.amos.think.domain;
 
 import org.apache.commons.codec.digest.DigestUtils;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class UserEntityTest {
 

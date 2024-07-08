@@ -14,6 +14,7 @@
     <name>think-domain</name>
 
     <dependencies>
+
         <!-- COLA components -->
         <dependency>
             <groupId>com.alibaba.cola</groupId>
@@ -24,13 +25,10 @@
             <artifactId>cola-component-exception</artifactId>
         </dependency>
         <!-- COLA components End-->
+
         <dependency>
             <groupId>com.amos</groupId>
             <artifactId>think-client</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
@@ -39,6 +37,10 @@
         <dependency>
             <groupId>commons-codec</groupId>
             <artifactId>commons-codec</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
         </dependency>
     </dependencies>
 

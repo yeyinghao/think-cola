@@ -2,10 +2,10 @@ package com.amos.think.user.command.query;
 
 import com.alibaba.cola.dto.SingleResponse;
 import com.amos.think.common.exception.ThinkBizException;
-import com.amos.think.domain.gateway.UserGateway;
+import com.amos.think.domain.user.gateway.UserGateway;
 import com.amos.think.domain.user.UserEntity;
-import com.amos.think.dto.data.ErrorCode;
-import com.amos.think.dto.data.UserVO;
+import com.amos.think.user.dto.data.ErrorCode;
+import com.amos.think.user.dto.data.UserVO;
 import com.amos.think.user.assembler.UserAssembler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

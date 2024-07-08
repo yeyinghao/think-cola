@@ -1,7 +1,7 @@
-package com.amos.think.domain.gateway;
+package com.amos.think.domain.user.gateway;
 
 import com.amos.think.domain.user.UserEntity;
-import com.amos.think.dto.query.UserListByParamQuery;
+import com.amos.think.user.dto.query.UserListByParamQuery;
 
 import java.util.List;
 

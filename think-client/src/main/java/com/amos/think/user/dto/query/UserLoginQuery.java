@@ -1,4 +1,4 @@
-package com.amos.think.dto.query;
+package com.amos.think.user.dto.query;
 
 import com.alibaba.cola.dto.Query;
 import lombok.Data;

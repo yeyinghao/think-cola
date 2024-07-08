@@ -2,11 +2,12 @@ package com.amos.think.adapter.web;
 
 import com.alibaba.cola.dto.MultiResponse;
 import com.alibaba.cola.dto.Response;
-import com.amos.think.api.IUserService;
-import com.amos.think.dto.UserRegisterCmd;
-import com.amos.think.dto.data.UserVO;
-import com.amos.think.dto.query.UserListByParamQuery;
-import com.amos.think.dto.query.UserLoginQuery;
+import com.amos.think.user.IUserService;
+import com.amos.think.user.api.IUserService;
+import com.amos.think.user.dto.UserRegisterCmd;
+import com.amos.think.user.dto.data.UserVO;
+import com.amos.think.user.dto.query.UserListByParamQuery;
+import com.amos.think.user.dto.query.UserLoginQuery;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

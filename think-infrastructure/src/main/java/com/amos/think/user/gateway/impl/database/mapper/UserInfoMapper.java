@@ -1,6 +1,6 @@
-package com.amos.think.gateway.impl.database.mapper;
+package com.amos.think.user.gateway.impl.database.mapper;
 
-import com.amos.think.gateway.impl.database.dataobject.UserInfoDO;
+import com.amos.think.user.gateway.impl.database.dataobject.UserInfoDO;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

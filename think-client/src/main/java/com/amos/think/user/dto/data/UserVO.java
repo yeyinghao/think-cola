@@ -1,27 +1,19 @@
-package com.amos.think.dto;
+package com.amos.think.user.dto.data;
 
-import com.alibaba.cola.dto.Command;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 
 import java.time.LocalDate;
 
 /**
- * 新增用户请求
+ * User VO
  *
  * @author <a href="mailto:daoyuan0626@gmail.com">amos.wang</a>
  * @date 2021/1/8
  */
-@EqualsAndHashCode(callSuper = true)
 @Data
-public class UserRegisterCmd extends Command {
+public class UserVO {
 
-    private static final long serialVersionUID = -5726685703640910355L;
-
-    public UserRegisterCmd(String username, String password) {
-        this.username = username;
-        this.password = password;
-    }
+    private Long id;
 
     /**
      * 用户名
@@ -29,30 +21,26 @@ public class UserRegisterCmd extends Command {
     private String username;
 
     /**
-     * 密码
-     */
-    private String password;
-
-    /**
      * 姓名（较常用，故放在用户主表）
      */
     private String name;
-
     /**
-     * 手机号
+     * 手机号（可用手机号登录，故放在用户主表）
      */
     private String phoneNo;
+
+    /*
+     * 附加信息
+     */
 
     /**
      * 性别
      */
     private Integer gender;
-
     /**
      * 生日
      */
     private LocalDate birthday;
-
     /**
      * 描述
      */

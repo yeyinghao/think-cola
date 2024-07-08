@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.amos.think.gateway.impl.database.mapper.UserMapper">
+<mapper namespace="com.amos.think.user.gateway.impl.database.mapper.UserMapper">
 
-    <resultMap id="userDOMap" type="com.amos.think.gateway.impl.database.dataobject.UserDO">
+    <resultMap id="userDOMap" type="com.amos.think.user.gateway.impl.database.dataobject.UserDO">
         <result property="id" column="id"/>
         <result property="username" column="username"/>
         <result property="name" column="name"/>

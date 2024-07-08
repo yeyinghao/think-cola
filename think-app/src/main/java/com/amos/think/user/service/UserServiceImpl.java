@@ -1,14 +1,15 @@
-package com.amos.think.service;
+package com.amos.think.user.service;
 
 import com.alibaba.cola.catchlog.CatchAndLog;
 import com.alibaba.cola.dto.MultiResponse;
 import com.alibaba.cola.dto.SingleResponse;
-import com.amos.think.api.IUserService;
-import com.amos.think.dto.UserModifyCmd;
-import com.amos.think.dto.UserRegisterCmd;
-import com.amos.think.dto.data.UserVO;
-import com.amos.think.dto.query.UserListByParamQuery;
-import com.amos.think.dto.query.UserLoginQuery;
+import com.amos.think.user.IUserService;
+import com.amos.think.user.api.IUserService;
+import com.amos.think.user.dto.UserModifyCmd;
+import com.amos.think.user.dto.UserRegisterCmd;
+import com.amos.think.user.dto.data.UserVO;
+import com.amos.think.user.dto.query.UserListByParamQuery;
+import com.amos.think.user.dto.query.UserLoginQuery;
 import com.amos.think.user.command.UserModifyCmdExe;
 import com.amos.think.user.command.UserRegisterCmdExe;
 import com.amos.think.user.command.query.UserInfoQueryExe;

@@ -1,7 +1,7 @@
 package com.amos.think.common.exception;
 
 import com.alibaba.cola.exception.BizException;
-import com.amos.think.dto.data.ErrorCode;
+import com.amos.think.user.dto.data.ErrorCode;
 
 /**
  * 业务异常
