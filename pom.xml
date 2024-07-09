@@ -29,7 +29,7 @@
         <mybatis-plus.version>3.5.1</mybatis-plus.version>
         <pagehelper.version>1.4.1</pagehelper.version>
         <jasypt.version>3.0.5</jasypt.version>
-        <redisson.version>3.15.6</redisson.version>
+        <redisson.version>3.32.0</redisson.version>
         <minio.version>8.0.3</minio.version>
         <xxl-job.version>2.4.0</xxl-job.version>
         <poi-ooxml.version>4.1.2</poi-ooxml.version>
