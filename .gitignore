@@ -23,3 +23,5 @@ dist/
 nbdist/
 bin/
 .DS_Store
+
+logs
