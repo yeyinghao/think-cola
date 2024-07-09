@@ -3,7 +3,6 @@ package com.amos.think.user.service;
 import com.alibaba.cola.catchlog.CatchAndLog;
 import com.alibaba.cola.dto.MultiResponse;
 import com.alibaba.cola.dto.SingleResponse;
-import com.amos.think.user.IUserService;
 import com.amos.think.user.api.IUserService;
 import com.amos.think.user.dto.UserModifyCmd;
 import com.amos.think.user.dto.UserRegisterCmd;

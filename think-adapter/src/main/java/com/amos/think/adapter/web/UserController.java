@@ -2,7 +2,6 @@ package com.amos.think.adapter.web;
 
 import com.alibaba.cola.dto.MultiResponse;
 import com.alibaba.cola.dto.Response;
-import com.amos.think.user.IUserService;
 import com.amos.think.user.api.IUserService;
 import com.amos.think.user.dto.UserRegisterCmd;
 import com.amos.think.user.dto.data.UserVO;
