@@ -1,4 +1,4 @@
-package com.amos.think.common.helper;
+package com.amos.think.common.response;
 
 import com.amos.think.common.enums.CommErrorEnum;
 import lombok.Data;
@@ -6,16 +6,18 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import java.util.List;
+
 @EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
 @ToString
-public class SmySingleResponse<T> extends SmyResponse {
+public class SmyMultiResponse<T> extends SmyResponse {
 
-	private T data;
+	private List<T> data;
 
-	public static <T> SmySingleResponse<T> of(T data) {
-		SmySingleResponse<T> resultHelper = new SmySingleResponse<>();
+	public static <T> SmyMultiResponse<T> of(List<T> data) {
+		SmyMultiResponse<T> resultHelper = new SmyMultiResponse<>();
 		resultHelper.setCode(CommErrorEnum.SUCCESS.getCode());
 		resultHelper.setSuccess(Boolean.TRUE);
 		resultHelper.setData(data);

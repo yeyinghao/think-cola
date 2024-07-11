@@ -1,4 +1,4 @@
-package com.amos.think.common.helper;
+package com.amos.think.common.response;
 
 import com.amos.think.common.enums.CommErrorEnum;
 import com.baomidou.mybatisplus.core.metadata.IPage;

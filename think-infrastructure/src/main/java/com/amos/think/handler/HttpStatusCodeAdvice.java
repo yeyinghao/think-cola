@@ -6,7 +6,7 @@ package com.amos.think.handler;
 
 import com.amos.think.common.enums.CommErrorEnum;
 import com.amos.think.common.exception.SmyBizExceptionFactory;
-import com.amos.think.common.helper.SmyResponse;
+import com.amos.think.common.response.SmyResponse;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;

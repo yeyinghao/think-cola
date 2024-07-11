@@ -1,4 +1,4 @@
-package com.amos.think.common.helper;
+package com.amos.think.common.response;
 
 import cn.hutool.core.util.StrUtil;
 import com.alibaba.cola.dto.Response;

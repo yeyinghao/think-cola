@@ -4,7 +4,7 @@ import cn.hutool.core.util.StrUtil;
 import com.amos.think.common.constant.CommConstant;
 import com.amos.think.common.enums.CommErrorEnum;
 import com.amos.think.common.exception.SmyBizException;
-import com.amos.think.common.helper.SmyResponse;
+import com.amos.think.common.response.SmyResponse;
 import com.amos.think.common.util.LoggerUtil;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;

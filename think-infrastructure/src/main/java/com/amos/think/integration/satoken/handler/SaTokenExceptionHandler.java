@@ -3,7 +3,7 @@ package com.amos.think.integration.satoken.handler;
 
 import cn.dev33.satoken.exception.NotLoginException;
 import com.amos.think.common.enums.CommErrorEnum;
-import com.amos.think.common.helper.SmyResponse;
+import com.amos.think.common.response.SmyResponse;
 import com.amos.think.common.util.LoggerUtil;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
