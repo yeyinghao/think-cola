@@ -6,7 +6,7 @@
 package com.amos.think.common.util;
 
 import com.amos.think.common.constant.CommConstant;
-import com.amos.think.common.exception.BizException;
+import com.amos.think.common.exception.SmyBizException;
 import lombok.experimental.UtilityClass;
 import org.slf4j.Logger;
 
@@ -97,7 +97,7 @@ public class LoggerUtil {
 	 * @param logger 日志记录器
 	 * @param e      e
 	 */
-	public static void info(Logger logger, BizException e) {
+	public static void info(Logger logger, SmyBizException e) {
 		logger.info(getContentString(e.getErrorEnum(), Arrays.asList(e.getMessage())));
 	}
 
