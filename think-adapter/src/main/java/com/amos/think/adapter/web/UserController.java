@@ -1,12 +1,8 @@
 package com.amos.think.adapter.web;
 
-import com.alibaba.cola.dto.MultiResponse;
-import com.alibaba.cola.dto.Response;
+import com.amos.think.common.response.SmyResponse;
 import com.amos.think.user.api.UserManager;
 import com.amos.think.user.dto.UserRegisterCmd;
-import com.amos.think.user.dto.data.UserVO;
-import com.amos.think.user.dto.query.UserListByParamQuery;
-import com.amos.think.user.dto.query.UserLoginQuery;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,26 +20,10 @@ public class UserController {
     private UserManager userService;
 
 
-    @GetMapping(value = "/hello")
-    public String hello() {
-        return "Hello, welcome to COLA world!";
-    }
-
     @PostMapping(value = "/register")
-    public Response register(@RequestBody UserRegisterCmd cmd) {
+    public SmyResponse register(@RequestBody UserRegisterCmd cmd) {
         userService.register(cmd);
-        return Response.buildSuccess();
-    }
-
-    @PostMapping(value = "/login")
-    public Response login(@RequestBody UserLoginQuery userLoginQuery) {
-        userService.login(userLoginQuery);
-        return Response.buildSuccess();
-    }
-
-    @GetMapping(value = "/list")
-    public MultiResponse<UserVO> list(@RequestParam(required = false) String name) {
-        return userService.listByName(UserListByParamQuery.builder().name(name).build());
+        return SmyResponse.buildSuccess();
     }
 
 }

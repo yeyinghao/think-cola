@@ -1,7 +1,6 @@
 package com.amos.think.domain.user.gateway;
 
 import com.amos.think.domain.user.UserEntity;
-import com.amos.think.user.dto.query.UserListByParamQuery;
 
 import java.util.List;
 
@@ -28,14 +27,6 @@ public interface UserGateway {
      * @return 用户实体
      */
     UserEntity findById(Long id);
-
-    /**
-     * 根据条件查询
-     *
-     * @param query 用户名等
-     * @return List 用户实体
-     */
-    List<UserEntity> findByParam(UserListByParamQuery query);
 
     /**
      * 获取密码信息

@@ -1,12 +1,10 @@
 package com.amos.think.user.command.query;
 
 import com.alibaba.cola.dto.SingleResponse;
-import com.amos.think.common.exception.ThinkBizException;
-import com.amos.think.domain.user.gateway.UserGateway;
 import com.amos.think.domain.user.UserEntity;
-import com.amos.think.user.dto.data.ErrorCode;
-import com.amos.think.user.dto.data.UserVO;
+import com.amos.think.domain.user.gateway.UserGateway;
 import com.amos.think.user.assembler.UserAssembler;
+import com.amos.think.user.dto.data.UserVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -27,7 +25,6 @@ public class UserInfoQueryExe {
     public SingleResponse<UserVO> execute(Long id) {
         UserEntity userEntity = userGateway.findById(id);
         if (Objects.isNull(userEntity)) {
-            throw new ThinkBizException(ErrorCode.B_USER_UNDEFINED);
         }
 
         return SingleResponse.of(UserAssembler.toValueObject(userEntity));

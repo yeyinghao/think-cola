@@ -9,7 +9,7 @@ import cn.hutool.core.date.DatePattern;
 import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.io.file.FileNameUtil;
 import cn.hutool.core.util.IdUtil;
-import com.amos.think.common.enums.FileTypeEnum;
+import com.amos.think.integration.file.enums.FileTypeEnum;
 
 import java.time.LocalDateTime;
 

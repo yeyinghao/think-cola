@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @EnableScheduling
 @SpringBootApplication(scanBasePackages = {"com.amos.think", "com.alibaba", "com.baomidou"})
-@MapperScan("com.amos.think.user.mapper")
+@MapperScan("com.amos.think.db.**.mapper")
 @RestController
 @Slf4j
 public class Application {

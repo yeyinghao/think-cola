@@ -3,7 +3,6 @@ package com.amos.think.user.assembler;
 import com.amos.think.domain.user.UserEntity;
 import com.amos.think.domain.user.UserName;
 import com.amos.think.domain.user.UserPassword;
-import com.amos.think.user.dto.UserModifyCmd;
 import com.amos.think.user.dto.UserRegisterCmd;
 import com.amos.think.user.dto.data.UserVO;
 
@@ -20,19 +19,6 @@ public class UserAssembler {
         UserEntity userEntity = new UserEntity();
         userEntity.setUsername(new UserName(co.getUsername()));
         userEntity.setPassword(new UserPassword(co.getPassword()));
-        userEntity.setName(co.getName());
-        userEntity.setPhoneNo(co.getPhoneNo());
-        userEntity.setGender(co.getGender());
-        userEntity.setBirthday(co.getBirthday());
-        userEntity.setDescription(co.getDescription());
-
-        return userEntity;
-    }
-
-    public static UserEntity toEntity(UserModifyCmd co) {
-        UserEntity userEntity = new UserEntity();
-        userEntity.setId(co.getId());
-        userEntity.setUsername(new UserName(co.getUsername()));
         userEntity.setName(co.getName());
         userEntity.setPhoneNo(co.getPhoneNo());
         userEntity.setGender(co.getGender());
