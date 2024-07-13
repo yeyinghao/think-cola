@@ -2,12 +2,12 @@ package com.amos.think.integration.dal.convert;
 
 import cn.hutool.core.collection.CollectionUtil;
 import com.amos.think.integration.dal.model.BaseDP;
-import com.amos.think.integration.dal.model.BasePO;
+import com.amos.think.integration.dal.model.BaseDO;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-public interface DataConvert<P extends BasePO, D extends BaseDP> {
+public interface DataConvert<P extends BaseDO, D extends BaseDP> {
 
 	/**
 	 * 转换成Po

@@ -2,11 +2,9 @@ package com.amos.think.user.convertor;
 
 import com.amos.think.domain.user.UserEntity;
 import com.amos.think.domain.user.UserName;
-import com.amos.think.user.gateway.impl.database.dataobject.UserDO;
-import com.amos.think.user.gateway.impl.database.dataobject.UserInfoDO;
+import com.amos.think.user.model.User;
+import com.amos.think.user.model.UserInfo;
 import org.apache.commons.lang3.tuple.ImmutablePair;
-
-import java.time.LocalDateTime;
 
 /**
  * UserConvertor DO <---> Entity
@@ -16,7 +14,7 @@ import java.time.LocalDateTime;
  */
 public class UserConvertor {
 
-    public static UserEntity toEntity(UserDO userDO, UserInfoDO userInfoDO) {
+    public static UserEntity toEntity(User userDO, UserInfo userInfoDO) {
         UserEntity userEntity = new UserEntity();
         userEntity.setId(userDO.getId());
         userEntity.setUsername(new UserName(userDO.getUsername()));
@@ -32,17 +30,15 @@ public class UserConvertor {
         return userEntity;
     }
 
-    public static ImmutablePair<UserDO, UserInfoDO> toAddUserDO(UserEntity userEntity) {
-        UserDO userDO = new UserDO();
+    public static ImmutablePair<User, UserInfo> toAddUserDO(UserEntity userEntity) {
+        User userDO = new User();
         userDO.setId(userEntity.getId());
         userDO.setUsername(userEntity.getUsername().getName());
         userDO.setPassword(userEntity.getPassword().getEncryptPassword());
         userDO.setName(userEntity.getName());
-        userDO.setDeleteFlag(false);
-        userDO.setGmtCreate(LocalDateTime.now());
 
         // user info
-        UserInfoDO userInfoDO = new UserInfoDO();
+        UserInfo userInfoDO = new UserInfo();
         userInfoDO.setPhoneNo(userEntity.getPhoneNo());
         userInfoDO.setGender(userEntity.getGender());
         userInfoDO.setBirthday(userEntity.getBirthday());
@@ -51,7 +47,7 @@ public class UserConvertor {
         return new ImmutablePair<>(userDO, userInfoDO);
     }
 
-    public static void toModifyUserDO(UserEntity userEntity, UserDO userDO, UserInfoDO userInfoDO) {
+    public static void toModifyUserDO(UserEntity userEntity, User userDO, UserInfo userInfoDO) {
         userDO.setName(userEntity.getName());
         userDO.setUsername(userEntity.getUsername().getName());
 

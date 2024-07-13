@@ -2,7 +2,7 @@ package com.amos.think.test;
 
 import com.alibaba.cola.dto.MultiResponse;
 import com.alibaba.fastjson2.JSON;
-import com.amos.think.user.api.IUserService;
+import com.amos.think.user.api.UserManager;
 import com.amos.think.common.exception.ThinkBizException;
 import com.amos.think.user.dto.UserModifyCmd;
 import com.amos.think.user.dto.UserRegisterCmd;
@@ -35,7 +35,7 @@ import java.util.UUID;
 public class UserServiceTest {
 
     @Autowired
-    private IUserService userService;
+    private UserManager userService;
 
     private static final String username = "AMOS_" + UUID.randomUUID().toString().substring(0, 8).toUpperCase();
     private static final String password = "666666";

@@ -1,12 +1,10 @@
 package com.amos.think.user.command;
 
-import com.amos.think.common.exception.ThinkBizException;
-import com.amos.think.domain.user.gateway.UserGateway;
 import com.amos.think.domain.user.UserEntity;
-import com.amos.think.user.dto.UserModifyCmd;
-import com.amos.think.user.dto.data.ErrorCode;
-import com.amos.think.user.dto.data.UserVO;
+import com.amos.think.domain.user.gateway.UserGateway;
 import com.amos.think.user.assembler.UserAssembler;
+import com.amos.think.user.dto.UserModifyCmd;
+import com.amos.think.user.dto.data.UserVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -24,9 +22,9 @@ public class UserModifyCmdExe {
 
     public UserVO execute(UserModifyCmd cmd) {
         // check 用户名是否重复
-        if (userGateway.checkByUsername(cmd.getId(), cmd.getUsername())) {
-            throw new ThinkBizException(ErrorCode.B_USER_USERNAME_REPEAT);
-        }
+//        if (userGateway.checkByUsername(cmd.getId(), cmd.getUsername())) {
+//            throw new ThinkBizException(ErrorCode.B_USER_USERNAME_REPEAT);
+//        }
 
         UserEntity userEntity = userGateway.save(UserAssembler.toEntity(cmd));
         return UserAssembler.toValueObject(userEntity);

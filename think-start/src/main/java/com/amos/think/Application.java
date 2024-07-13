@@ -1,5 +1,7 @@
 package com.amos.think;
 
+import com.amos.think.common.util.LoggerUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,13 +15,18 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Frank Zhang
  */
 @EnableScheduling
-@SpringBootApplication(scanBasePackages = {"com.amos.think", "com.alibaba.cola"})
-@MapperScan("com.amos.think.user.gateway.impl.database.mapper")
+@SpringBootApplication(scanBasePackages = {"com.amos.think", "com.alibaba", "com.baomidou"})
+@MapperScan("com.amos.think.user.mapper")
 @RestController
+@Slf4j
 public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
+		try {
+			SpringApplication.run(Application.class, args);
+		} catch (Exception e) {
+			LoggerUtil.error(log, e);
+		}
 	}
 
 	@GetMapping("/")

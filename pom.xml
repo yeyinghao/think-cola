@@ -16,17 +16,16 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <mybatis-starter.version>3.0.2</mybatis-starter.version>
         <spring-boot.version>3.1.0</spring-boot.version>
         <cola.components.version>5.0.0</cola.components.version>
 
-        <nacos.version>0.2.12</nacos.version>
+        <nacos.version>0.3.0-RC</nacos.version>
         <mybatis-encrypt-version>1.2.0</mybatis-encrypt-version>
         <sa-token.version>1.37.0</sa-token.version>
         <hutool.version>5.8.20</hutool.version>
         <lombok.version>1.18.24</lombok.version>
         <mysql-connector.version>8.0.27</mysql-connector.version>
-        <mybatis-plus.version>3.5.1</mybatis-plus.version>
+        <mybatis-plus.version>3.5.7</mybatis-plus.version>
         <pagehelper.version>1.4.1</pagehelper.version>
         <jasypt.version>3.0.5</jasypt.version>
         <redisson.version>3.32.0</redisson.version>
@@ -93,11 +92,6 @@
                 <version>${spring-boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.mybatis.spring.boot</groupId>
-                <artifactId>mybatis-spring-boot-starter</artifactId>
-                <version>${mybatis-starter.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.mysql</groupId>

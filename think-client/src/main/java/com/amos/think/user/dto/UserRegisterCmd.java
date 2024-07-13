@@ -1,8 +1,10 @@
 package com.amos.think.user.dto;
 
 import com.alibaba.cola.dto.Command;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
@@ -14,6 +16,8 @@ import java.time.LocalDate;
  */
 @EqualsAndHashCode(callSuper = true)
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class UserRegisterCmd extends Command {
 
     private static final long serialVersionUID = -5726685703640910355L;

@@ -3,7 +3,7 @@ package com.amos.think.integration.dal.impl;
 import com.amos.think.integration.dal.CoreService;
 import com.amos.think.integration.dal.convert.DataConvert;
 import com.amos.think.integration.dal.model.BaseDP;
-import com.amos.think.integration.dal.model.BasePO;
+import com.amos.think.integration.dal.model.BaseDO;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -17,7 +17,7 @@ import java.util.List;
  * @date 2024/04/19
  */
 @SuppressWarnings("unused")
-public abstract class CoreServiceImpl<P extends BasePO, D extends BaseDP, M extends BaseMapper<P>> extends ServiceImpl<M, P> implements CoreService<D, P>, DataConvert<P, D> {
+public abstract class CoreServiceImpl<P extends BaseDO, D extends BaseDP, M extends BaseMapper<P>> extends ServiceImpl<M, P> implements CoreService<D, P>, DataConvert<P, D> {
 
 	@Override
 	public void save(D entity) {

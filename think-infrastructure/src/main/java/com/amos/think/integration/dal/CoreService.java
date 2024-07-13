@@ -2,7 +2,7 @@ package com.amos.think.integration.dal;
 
 
 import com.amos.think.integration.dal.model.BaseDP;
-import com.amos.think.integration.dal.model.BasePO;
+import com.amos.think.integration.dal.model.BaseDO;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.List;
  * @date 2024/04/02
  */
 @SuppressWarnings("unused")
-public interface CoreService<D extends BaseDP, P extends BasePO> {
+public interface CoreService<D extends BaseDP, P extends BaseDO> {
 
 	/**
 	 * 保存

@@ -2,7 +2,7 @@ package com.amos.think.adapter.web;
 
 import com.alibaba.cola.dto.MultiResponse;
 import com.alibaba.cola.dto.Response;
-import com.amos.think.user.api.IUserService;
+import com.amos.think.user.api.UserManager;
 import com.amos.think.user.dto.UserRegisterCmd;
 import com.amos.think.user.dto.data.UserVO;
 import com.amos.think.user.dto.query.UserListByParamQuery;
@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
 
     @Autowired
-    private IUserService userService;
+    private UserManager userService;
 
 
     @GetMapping(value = "/hello")
