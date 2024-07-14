@@ -5,14 +5,10 @@
 
 package com.amos.think.common.util;
 
-import com.amos.think.common.constant.CommConstant;
+import cn.hutool.core.util.StrUtil;
 import com.amos.think.common.exception.SmyBizException;
 import lombok.experimental.UtilityClass;
 import org.slf4j.Logger;
-
-import java.util.Arrays;
-import java.util.Objects;
-import java.util.stream.Collectors;
 
 
 /**
@@ -22,126 +18,74 @@ import java.util.stream.Collectors;
  * @date 2023/08/01
  */
 @UtilityClass
+@SuppressWarnings("unused")
 public class LoggerUtil {
 
-	/**
-	 * 离开了分隔符
-	 */
-	private static final String LEFT_DELIMITER = "[";
-
-	/**
-	 * 正确分隔符
-	 */
-	private static final String RIGHT_DELIMITER = "]";
-
-	/**
-	 * 空字符串
-	 */
-	private static final String EMPTY_STRING = "-";
-
-	/**
-	 * warn日志
-	 *
-	 * @param logger 日志记录器
-	 * @param e      e
-	 * @param objs   obj
-	 */
-	public static void warn(Logger logger, Exception e, Object... objs) {
-		logger.warn(getContentString(objs), e);
+	public static void warn(Logger logger, Throwable e, String message) {
+		logger.warn(message, e);
 	}
 
-	/**
-	 * warn日志
-	 *
-	 * @param logger 日志记录器
-	 * @param objs   obj
-	 */
-	public static void warn(Logger logger, Object... objs) {
-		logger.warn(getContentString(objs));
+	public static void warn(Logger logger, Throwable e, String template, Object... messages) {
+		logger.warn(StrUtil.format(template, messages), e);
 	}
 
-	/**
-	 * debug日志
-	 *
-	 * @param logger 日志记录器
-	 * @param objs   obj
-	 */
-	public static void debug(Logger logger, Object... objs) {
-		logger.debug(getContentString(objs));
+	public static void warn(Logger logger, String message) {
+		logger.warn(message);
 	}
 
-	/**
-	 * info日志
-	 *
-	 * @param logger 日志记录器
-	 * @param objs   obj
-	 */
-	public static void info(Logger logger, Object... objs) {
-		logger.info(getContentString(objs));
+	public static void warn(Logger logger, String template, Object... messages) {
+		logger.warn(StrUtil.format(template, messages));
 	}
 
-	/**
-	 * info日志
-	 *
-	 * @param logger 日志记录器
-	 * @param e      e
-	 * @param objs   obj
-	 */
-	public static void info(Logger logger, Throwable e, Object... objs) {
-		logger.info(getContentString(objs), e);
+	public static void debug(Logger logger, String message) {
+		logger.debug(message);
 	}
 
-	/**
-	 * info日志
-	 *
-	 * @param logger 日志记录器
-	 * @param e      e
-	 */
+	public static void debug(Logger logger, String template, Object... messages) {
+		logger.debug(StrUtil.format(template, messages));
+	}
+
+	public static void info(Logger logger, Throwable e, String message) {
+		logger.info(message, e);
+	}
+
+	public static void info(Logger logger, Throwable e) {
+		logger.info(e.getMessage(), e);
+	}
+
+	public static void info(Logger logger, Throwable e, String template, Object... messages) {
+		logger.info(StrUtil.format(template, messages), e);
+	}
+
+	public static void info(Logger logger, String message) {
+		logger.info(message);
+	}
+
+	public static void info(Logger logger, String template, Object... messages) {
+		logger.info(StrUtil.format(template, messages));
+	}
+
+	public static void error(Logger logger, Throwable e, String message) {
+		logger.error(message, e);
+	}
+
+	public static void error(Logger logger, Throwable e) {
+		logger.error(e.getMessage(), e);
+	}
+
+	public static void error(Logger logger, Throwable e, String template, Object... messages) {
+		logger.error(StrUtil.format(template, messages), e);
+	}
+
+	public static void error(Logger logger, String message) {
+		logger.error(message);
+	}
+
+	public static void error(Logger logger, String template, Object... messages) {
+		logger.error(StrUtil.format(template, messages));
+	}
+
 	public static void info(Logger logger, SmyBizException e) {
-		logger.info(getContentString(e.getErrorEnum(), Arrays.asList(e.getMessage())));
-	}
-
-	/**
-	 * error日志
-	 *
-	 * @param logger 日志记录器
-	 * @param objs   obj
-	 */
-	public static void error(Logger logger, Object... objs) {
-		logger.error(getContentString(objs));
-	}
-
-	/**
-	 * error日志
-	 *
-	 * @param logger 日志记录器
-	 * @param e      e
-	 * @param objs   obj
-	 */
-	public static void error(Logger logger, Throwable e, Object... objs) {
-		logger.error(getContentString(objs), e);
-	}
-
-	/**
-	 * 获取内容字符串
-	 *
-	 * @param objs obj
-	 * @return {@link String}
-	 */
-	private static String getContentString(Object... objs) {
-		return LEFT_DELIMITER + Arrays.stream(objs).map(LoggerUtil::object2String).collect(Collectors.joining(CommConstant.DELIMITER)) + RIGHT_DELIMITER;
-	}
-
-	/**
-	 * object2字符串
-	 *
-	 * @param obj obj
-	 * @return {@link String}
-	 */
-	private static String object2String(Object obj) {
-		if (Objects.nonNull(obj)) {
-			return obj.toString();
-		}
-		return EMPTY_STRING;
+		logger.info(e.toString());
 	}
 }
