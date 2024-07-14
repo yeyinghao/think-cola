@@ -61,7 +61,7 @@ public class SmyResponse extends Response {
 			msg.append(CommConstant.DELIMITER).append(message);
 		}
 		resultHelper.setErrCode(errorEnum.name());
-		resultHelper.setErrCode(msg.toString());
+		resultHelper.setErrMessage(msg.toString());
 		return resultHelper;
 	}
 
